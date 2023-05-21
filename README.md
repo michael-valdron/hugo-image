@@ -5,7 +5,7 @@
 [![MIT](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE)
 
  [dockerhub-badge]: https://img.shields.io/docker/pulls/michaelvaldron/hugo
- [dockerhub]: https://hub.docker.com/repository/docker/michaelvaldron/hugo
+ [dockerhub]: https://hub.docker.com/r/michaelvaldron/hugo
 
 
 A container image for using the Hugo CLI command.
