@@ -1,4 +1,4 @@
-FROM docker.io/library/golang:1.19-alpine
+FROM docker.io/library/golang:1.20-alpine
 
 RUN apk update && apk add hugo git
 
