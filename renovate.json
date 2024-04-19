@@ -6,6 +6,13 @@
       "matchUpdateTypes": ["major"],
       "matchBaseBranches": "main",
       "enabled": false
+    },
+    {
+      "matchUpdateTypes": ["major", "minor"],
+      "matchBaseBranches": "main",
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["docker.io/library/golang"],
+      "enabled": false
     }
   ]
 }
