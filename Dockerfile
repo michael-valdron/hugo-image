@@ -6,4 +6,12 @@ RUN mkdir -p /project
 
 WORKDIR /project
 
+ARG BUILD_DATE
+
+# Labels
+LABEL org.label-schema.schema-version="1.0"
+LABEL org.label-schema.build-date=${BUILD_DATE}
+LABEL org.label-schema.name="michaelvaldron/hugo"
+LABEL org.label-schema.description="A container image for using the Hugo CLI command"
+
 CMD ["hugo"]
