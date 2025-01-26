@@ -1,5 +1,7 @@
 # Hugo Container Image
 
+[![Go 1.22](https://img.shields.io/badge/1.22-blue?logo=go&labelColor=gray)](https://go.dev/doc/go1.22)
+[![Hugo Latest](https://img.shields.io/badge/latest-cb4879?logo=hugo&labelColor=gray)](https://github.com/gohugoio/hugo/releases/latest)
 [![dockerhub Publish CI](https://github.com/michael-valdron/hugo-image/actions/workflows/docker-publish.yaml/badge.svg)](https://github.com/michael-valdron/hugo-image/actions/workflows/docker-publish.yaml)
 [![Docker Hub badge][dockerhub-badge]][dockerhub]
 [![MIT](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE)
