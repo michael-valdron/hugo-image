@@ -9,6 +9,11 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        tag:
+          - latest
+          - go1.22
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - name: dockerhub login
@@ -20,6 +25,6 @@ jobs:
       - name: Build the Docker image
         run: bash build.sh
       - name: Tag the Docker image
-        run: docker tag michaelvaldron/hugo docker.io/michaelvaldron/hugo:latest
+        run: docker tag michaelvaldron/hugo docker.io/michaelvaldron/hugo:${{ matrix.tag }}
       - name: Publish the Docker image to dockerhub
-        run: docker push docker.io/michaelvaldron/hugo:latest
+        run: docker push docker.io/michaelvaldron/hugo:${{ matrix.tag }}
