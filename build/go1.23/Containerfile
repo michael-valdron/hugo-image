@@ -1,0 +1,17 @@
+FROM docker.io/library/golang:1.23-alpine@sha256:7152bd044e81d739fb4f663ab89a2ce5c1fa26308271eb291b1f0c82922a044b
+
+RUN apk update && apk add hugo git
+
+RUN mkdir -p /project
+
+WORKDIR /project
+
+ARG BUILD_DATE
+
+# Labels
+LABEL org.label-schema.schema-version="1.0"
+LABEL org.label-schema.build-date=${BUILD_DATE}
+LABEL org.label-schema.name="michaelvaldron/hugo"
+LABEL org.label-schema.description="A container image for using the Hugo CLI command"
+
+CMD ["hugo"]
