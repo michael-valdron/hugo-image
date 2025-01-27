@@ -23,6 +23,7 @@ if [ -d ${BASE_DIR}/build/${TAG} ]; then
     CONTAINER_FILE=${BASE_DIR}/build/${TAG}/Containerfile
 fi
 
+echo "DEBUG: Base Dir: ${BASE_DIR}"
 echo "DEBUG: Containerfile Path: ${CONTAINER_FILE}"
 
 ${CONTAINER_ENGINE} build . --file ${CONTAINER_FILE} \
