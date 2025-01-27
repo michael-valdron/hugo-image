@@ -35,3 +35,9 @@ docker run --rm -it -v <project_path>:/project -p 1313:1313 michaelvaldron/hugo 
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+### Deprecated Go Version Support
+
+Here is a list of Go versions that was past supported and can be manually built:
+
+- [Go 1.21 (support deprecated 2025-01-26)](build/go1.21)
