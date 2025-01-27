@@ -9,12 +9,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        tag:
-          - latest
-          - go1.22
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-      - name: Build the Docker image
-        run: bash build.sh "${{ matrix.tag }}"
+      - name: Build the Docker images
+        run: |
+          TAGS="$(ls build)"
+          for tag in $TAGS; do 
+            echo -n "Building '${tag}'... "
+            bash build.sh "${tag}"
+            echo "Done!"
+          done
