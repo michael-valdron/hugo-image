@@ -26,6 +26,7 @@ fi
 echo "DEBUG: Base Dir: ${BASE_DIR}"
 echo "DEBUG: Does Base Dir exist: $(if [ -d ${BASE_DIR} ]; then echo "true"; else echo "false"; fi)"
 echo "DEBUG: Containerfile Path: ${CONTAINER_FILE}"
+echo "DEBUG: Does Containerfile exist: $(if [ -f ${CONTAINER_FILE} ]; then echo "true"; else echo "false"; fi)"
 
 ${CONTAINER_ENGINE} build . --file ${CONTAINER_FILE} \
     --no-cache \
