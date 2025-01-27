@@ -23,6 +23,8 @@ if [ -d ${BASE_DIR}/build/${TAG} ]; then
     CONTAINER_FILE=${BASE_DIR}/build/${TAG}/Containerfile
 fi
 
+echo "DEBUG: Containerfile Path: ${CONTAINER_FILE}"
+
 ${CONTAINER_ENGINE} build . --file ${CONTAINER_FILE} \
     --no-cache \
     --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') \
