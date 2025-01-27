@@ -29,7 +29,7 @@ podman run --rm -it michaelvaldron/hugo <command>
 ### Run Server
 
 ```sh
-docker run --rm -it -v <project_path>:/project -p 1313:1313 michaelvaldron/hugo server
+docker run --rm -it -v <project_path>:/project -p 1313:1313 michaelvaldron/hugo hugo server
 ```
 
 ## Contributing
