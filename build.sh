@@ -24,6 +24,7 @@ if [ -d ${BASE_DIR}/build/${TAG} ]; then
 fi
 
 echo "DEBUG: Base Dir: ${BASE_DIR}"
+echo "DEBUG: Does Base Dir exist: $(if [ -d ${BASE_DIR} ]; then echo "true"; else echo "false"; fi)"
 echo "DEBUG: Containerfile Path: ${CONTAINER_FILE}"
 
 ${CONTAINER_ENGINE} build . --file ${CONTAINER_FILE} \
