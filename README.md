@@ -1,5 +1,6 @@
 # Hugo Container Image
 
+[![Go 1.24](https://img.shields.io/badge/1.24-blue?logo=go&labelColor=gray)](https://go.dev/doc/go1.24)
 [![Go 1.23](https://img.shields.io/badge/1.23-blue?logo=go&labelColor=gray)](https://go.dev/doc/go1.23)
 [![Go 1.22](https://img.shields.io/badge/1.22-blue?logo=go&labelColor=gray)](https://go.dev/doc/go1.22)
 [![Hugo Latest](https://img.shields.io/badge/latest-cb4879?logo=hugo&labelColor=gray)](https://github.com/gohugoio/hugo/releases/latest)
