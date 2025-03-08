@@ -13,7 +13,6 @@ jobs:
       matrix:
         tag:
           - latest
-          - go1.22
           - go1.23
           - go1.24
     steps:
