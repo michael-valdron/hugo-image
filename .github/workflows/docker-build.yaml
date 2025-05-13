@@ -16,6 +16,6 @@ jobs:
           TAGS="$(ls build)"
           for tag in $TAGS; do 
             echo -n "Building '${tag}'... "
-            bash build.sh "${tag}"
+            bash build.sh "${{ vars.IMG_TARGET }}" "${tag}"
             echo "Done!"
           done

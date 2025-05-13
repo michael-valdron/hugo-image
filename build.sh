@@ -2,7 +2,8 @@
 
 BASE_DIR="$(realpath $(dirname ${BASH_SOURCE[0]}))"
 CONTAINER_ENGINE=${CONTAINER_ENGINE:-docker}
-TAG=${1:-latest}
+IMG_NAME=${1:-'localhost/hugo'}
+TAG=${2:-latest}
 OS=${OS:-"$(uname -s | tr '[:upper:]' '[:lower:]')"}
 IMG_ARCH=${IMG_ARCH:-''}
 if [ -z "${IMG_ARCH}" ]; then
@@ -18,13 +19,22 @@ if [ -z "${IMG_ARCH}" ]; then
     esac
 fi
 
-CONTAINER_FILE=${BASE_DIR}/build/latest/Containerfile
-if [ -d ${BASE_DIR}/build/${TAG} ]; then
-    CONTAINER_FILE=${BASE_DIR}/build/${TAG}/Containerfile
+if [[ "${TAG}" == "latest" ]]; then
+    TAG=$(cat ${BASE_DIR}/build/latest)
+fi
+
+if [[ "${TAG}" == "$(cat ${BASE_DIR}/build/latest)" ]]; then
+    LATEST_TAG_ARG="--tag ${IMG_NAME}:latest"
+fi
+
+CONTAINER_FILE=${BASE_DIR}/build/${TAG}/Containerfile
+if [ ! -d ${BASE_DIR}/build/${TAG} ]; then
+    echo "error: build file '${CONTAINER_FILE}' for '${TAG}' does not exist"
+    exit 1
 fi
 
 ${CONTAINER_ENGINE} build . --file ${CONTAINER_FILE} \
     --no-cache \
     --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') \
     --platform ${OS}/${IMG_ARCH} \
-    --tag michaelvaldron/hugo:${TAG}
+    --tag ${IMG_NAME}:${TAG} ${LATEST_TAG_ARG}
