@@ -4,11 +4,11 @@ BASE_DIR="$(realpath $(dirname ${BASH_SOURCE[0]}))"
 CONTAINER_ENGINE=${CONTAINER_ENGINE:-docker}
 TAG=${1:-latest}
 OS=${OS:-"$(uname -s | tr '[:upper:]' '[:lower:]')"}
-ARCH=${ARCH:-''}
-if [ -z "${ARCH}" ]; then
+IMG_ARCH=${IMG_ARCH:-''}
+if [ -z "${IMG_ARCH}" ]; then
     case "$(uname -m)" in
         x86_64)
-            ARCH=amd64
+            IMG_ARCH=amd64
             ;;
         # UNSUPPORTED if platform is not listed here
         *)
@@ -26,5 +26,5 @@ fi
 ${CONTAINER_ENGINE} build . --file ${CONTAINER_FILE} \
     --no-cache \
     --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') \
-    --platform ${OS}/${ARCH} \
+    --platform ${OS}/${IMG_ARCH} \
     --tag michaelvaldron/hugo:${TAG}
