@@ -25,7 +25,7 @@ jobs:
           registry: docker.io
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-      - name: Build the Docker image
+      - name: Build the container image
         run: bash build.sh "${{ matrix.tag }}"
-      - name: Publish the Docker image to dockerhub
+      - name: Publish the container image to dockerhub
         run: docker push ${IMG_NAME}:${{ matrix.tag }}
