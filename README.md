@@ -3,9 +3,10 @@
 [![Go 1.24](https://img.shields.io/badge/1.24-blue?logo=go&labelColor=gray)](https://go.dev/doc/go1.24)
 [![Go 1.23](https://img.shields.io/badge/1.23-blue?logo=go&labelColor=gray)](https://go.dev/doc/go1.23)
 [![Hugo Latest](https://img.shields.io/badge/latest-cb4879?logo=hugo&labelColor=gray)](https://github.com/gohugoio/hugo/releases/latest)
-[![dockerhub Publish CI](https://github.com/michael-valdron/hugo-image/actions/workflows/docker-publish.yaml/badge.svg)](https://github.com/michael-valdron/hugo-image/actions/workflows/docker-publish.yaml)
+[![Publish CI](https://github.com/michael-valdron/hugo-image/actions/workflows/publish.yaml/badge.svg)](https://github.com/michael-valdron/hugo-image/actions/workflows/publish.yaml)
 [![Docker Hub badge][dockerhub-badge]][dockerhub]
-[![MIT](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE)
+[![Docker Repository on Quay](https://quay.io/repository/michaelvaldron/hugo/status "Docker Repository on Quay")](https://quay.io/repository/michaelvaldron/hugo)
+[![Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue)](LICENSE)
 
  [dockerhub-badge]: https://img.shields.io/docker/pulls/michaelvaldron/hugo
  [dockerhub]: https://hub.docker.com/r/michaelvaldron/hugo
