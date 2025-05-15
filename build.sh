@@ -2,6 +2,7 @@
 
 BASE_DIR="$(realpath $(dirname ${BASH_SOURCE[0]}))"
 CONTAINER_ENGINE=${CONTAINER_ENGINE:-docker}
+IMG_NAME=${IMG_NAME:-'michaelvaldron/hugo'}
 TAG=${1:-latest}
 OS=${OS:-"$(uname -s | tr '[:upper:]' '[:lower:]')"}
 IMG_ARCH=${IMG_ARCH:-''}
@@ -27,4 +28,4 @@ ${CONTAINER_ENGINE} build . --file ${CONTAINER_FILE} \
     --no-cache \
     --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') \
     --platform ${OS}/${IMG_ARCH} \
-    --tag michaelvaldron/hugo:${TAG}
+    --tag ${IMG_NAME}:${TAG}
