@@ -1,7 +1,7 @@
 # Hugo Container Image
 
+[![Go 1.25](https://img.shields.io/badge/1.25-blue?logo=go&labelColor=gray)](https://go.dev/doc/go1.25)
 [![Go 1.24](https://img.shields.io/badge/1.24-blue?logo=go&labelColor=gray)](https://go.dev/doc/go1.24)
-[![Go 1.23](https://img.shields.io/badge/1.23-blue?logo=go&labelColor=gray)](https://go.dev/doc/go1.23)
 [![Hugo Latest](https://img.shields.io/badge/latest-cb4879?logo=hugo&labelColor=gray)](https://github.com/gohugoio/hugo/releases/latest)
 [![Publish CI](https://github.com/michael-valdron/hugo-image/actions/workflows/publish.yaml/badge.svg)](https://github.com/michael-valdron/hugo-image/actions/workflows/publish.yaml)
 [![Docker Hub badge][dockerhub-badge]][dockerhub]
@@ -42,5 +42,6 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Here is a list of Go versions that was past supported and can be manually built:
 
+- [Go 1.23 (support deprecated 2025-09-02)](build/go1.23)
 - [Go 1.22 (support deprecated 2025-03-08)](build/go1.22)
 - [Go 1.21 (support deprecated 2025-01-26)](build/go1.21)

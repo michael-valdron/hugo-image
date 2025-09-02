@@ -13,8 +13,8 @@ jobs:
       matrix:
         tag:
           - latest
-          - go1.23
           - go1.24
+          - go1.25
     env:
       IMG_NAME: docker.io/michaelvaldron/hugo
       QUAY_IMG_NAME: quay.io/michaelvaldron/hugo
