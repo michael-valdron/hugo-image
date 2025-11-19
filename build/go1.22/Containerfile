@@ -1,4 +1,4 @@
-FROM docker.io/library/golang:1.22-alpine@sha256:4f0f3aec160975692070ece438adecb9df9bd78ee0f8d6d6736d8a571b0657c9
+FROM docker.io/library/golang:1.22-alpine@sha256:1699c10032ca2582ec89a24a1312d986a3f094aed3d5c1147b19880afe40e052
 
 RUN apk update && apk add hugo git
 
